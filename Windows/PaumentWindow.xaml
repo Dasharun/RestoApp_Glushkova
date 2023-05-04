@@ -1,0 +1,78 @@
+﻿<Window x:Class="RestoApp_Glushkova.Windows.PaumentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestoApp_Glushkova.Windows"
+        mc:Ignorable="d"
+        Title="PaumentWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <Button Content="Оплатить"
+                FontSize="20"
+             Grid.Row="3"
+            Height="70"
+                Click="Button_Click"
+                Background="Orange" 
+                Grid.ColumnSpan="3" 
+                Margin="23,17,31,17"
+                Style="{StaticResource DefaultButtonStyle}"/>
+
+
+        <TextBlock x:Name="ToPayTbl"
+                   Grid.Column="0"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Margin="23,40,42,35"/>
+        
+        
+        
+        <TextBlock 
+            Text="Наличными"
+                   Grid.Row="1"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Margin="23,34,133,40"/>
+
+        <TextBlock x:Name="ChangeTbl"
+            
+            Text="Банковской картой"
+                   Grid.Row="2"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Margin="23,40,42,35"/>
+
+        <TextBox Name="CostTb"
+            Grid.Column="1" 
+                 Grid.Row="1"
+                 Height="50"  
+                 GotFocus="CostTb_GotFocus"
+                 LostFocus="CostTb_LostFocus"
+                 Grid.ColumnSpan="2" 
+                 Margin="10,27,31,28" />
+
+        <TextBox
+            x:Name="BankCostTb"
+           TextChanged="BankCostTb_TextChanged"
+            Grid.Column="1" 
+            Grid.Row="2"
+            Height="50" Grid.ColumnSpan="2" Margin="10,20,31,35"/>
+    </Grid>
+
+
+</Window>
+
+

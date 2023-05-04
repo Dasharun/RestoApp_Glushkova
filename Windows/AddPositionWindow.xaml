@@ -1,0 +1,70 @@
+﻿<Window x:Class="RestoApp_Glushkova.Windows.AddPositionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestoApp_Glushkova.Windows"
+        mc:Ignorable="d"
+        Title="AddPositionWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox Name="PositionCmb"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                   Height="70"
+                  DisplayMemberPath="Title" Margin="10,18,10,17"/>
+
+        <Button Content="Добавить"
+                FontSize="20"
+             Grid.Row="3"
+                  Grid.Column="1"
+            Height="70"
+                Click="Button_Click_1"
+                Background="Orange" Margin="10,17"/>
+
+        <TextBlock Name="NameTb"
+            Text="Стоимость"
+                   Grid.Row="1"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock 
+            
+            Text="Тип позиции"
+                   Grid.Row="2"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+        />
+
+        <TextBlock Name="FilterCmb"
+                   Text="Название"
+                FontSize="25"
+       VerticalAlignment="Center"
+                   HorizontalAlignment="Center" />
+
+        <TextBox 
+            Name="PositionNameTb"
+            Grid.Column="1" 
+                 Height="50" Margin="10,28,10,27"
+                 />
+
+        <TextBox Name="CostTb"
+            Grid.Column="1" 
+                 Grid.Row="1"
+                 Height="50" Margin="10,27,10,28" TextChanged="CostTb_TextChanged"/>
+
+    </Grid>
+</Window>
